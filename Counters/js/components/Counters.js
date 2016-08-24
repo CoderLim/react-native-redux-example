@@ -17,12 +17,12 @@ import Counter from './Counter';
 
 export default class Counters extends Component {
   static propTypes = {
-    children: PropTypes.arrayof(PropsType.node).isRequired,
+    children: PropTypes.arrayOf(PropTypes.node).isRequired,
     addFn: PropTypes.func.isRequired,
   };
 
   render() {
-    const { children, addFn } = props;
+    const { children, addFn } = this.props;
     return (
       <View style={styles.container}>
         {children}
@@ -33,6 +33,8 @@ export default class Counters extends Component {
 }
 
 const styles = StyleSheet.create({
-  justifyContent: 'center',
-  alignItems: 'center',
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
 });

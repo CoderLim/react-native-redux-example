@@ -1,5 +1,4 @@
-export const NAME = 'app';
-
+import { NAME } from '../const';
 // 三种action类型
 export const INCREMENT = `${NAME}/INCREMENT`;
 export const DECREMENT = `${NAME}/DECREMENT`;

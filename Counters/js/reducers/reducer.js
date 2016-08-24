@@ -11,10 +11,14 @@ const initialState = {
 };
 
 export default handleActions({
+  /*
+   *
+   * [keyVar]: value, 这种是ES6的新语法，可以已变量的值作为key，就用[]括起来
+   *
+   */
   [ADD_NEW_COUNTER]: (state, action) => {
     const { idGen } = state;
     const newId = idGen + 1;
-
     return {
       idGen: newId,
       counters: {
@@ -25,7 +29,6 @@ export default handleActions({
   },
   [INCREMENT]: (state, action) => {
     const { payload: { id } } = action;
-
     return {
       ...state,
       counters: {
@@ -35,8 +38,7 @@ export default handleActions({
     }
   },
   [DECREMENT]: (state, action) => {
-    const { playload: { id }} = action;
-
+    const { payload: { id }} = action;
     return {
       ...state,
       counters: {

@@ -4,35 +4,8 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React from 'react';
+import { AppRegistry } from 'react-native';
+import Main from './js/Main';
 
-import Counter from './js/components/Counter';
-
-class Counters extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Counter decrementFn={()=>{}} incrementFn={()=>{}} incrementWithDelayFn={()=>{}}>
-          {0}
-        </Counter>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-});
-
-AppRegistry.registerComponent('Counters', () => Counters);
+AppRegistry.registerComponent('Counters', () => Main);

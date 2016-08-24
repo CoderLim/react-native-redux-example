@@ -7,8 +7,11 @@
    StyleSheet,
    View,
  } from 'react-native';
-import { connet } from 'react-redux';
-
+import { connect } from 'react-redux';
+/*
+ * 此处直接import的是components（目录），
+ * 因为在components下定义了index.js到处了需要导出的类
+ */
 import { Counter, Counters } from '../components';
 import * as actions from '../actions/actions';
 
@@ -43,7 +46,7 @@ class App extends Component {
       decrement,
       increment,
       incrementWithDelay,
-    } = props;
+    } = this.props;
 
     return (
       <View style={styles.container}>
@@ -65,6 +68,7 @@ const styles = StyleSheet.create({
 
 export default connect(
   (state) => ({
+    // 此处的app是reducer的key
     counters: state.app.counters,
   }),
   (dispatch) => ({
