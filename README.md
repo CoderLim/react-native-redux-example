@@ -1,4 +1,4 @@
 # react-native-redux-example
 
-* **ReactNativeReduxSimplest**：最简单的Demo
-* **Counters**：相对复杂点的Demo
+* **Discolor**：最简单的Demo：点击改变背景颜色
+* **Counters**：相对复杂点的Demo：多个计数器
